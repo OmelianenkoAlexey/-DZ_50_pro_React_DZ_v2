@@ -25,6 +25,7 @@ const MainWrapper = styled(Box)(() => ({
   backgroundColor: "red",
   height: "70vh",
   padding: "20px",
+  overflow: "auto",
 }));
 
 const FooterWrapper = styled(Box)(() => ({
