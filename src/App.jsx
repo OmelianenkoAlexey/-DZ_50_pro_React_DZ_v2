@@ -46,7 +46,7 @@ function App() {
             <Header />
           </HeaderWrapper>
         </Grid>
-        <Grid item sm={3} md={3} lg={3} display={{xs: "none", sm: "block"}}>
+        <Grid item sm={3} md={3} lg={3} display={{ xs: "none", sm: "block" }}>
           <NavBarWrapper>
             <NavBar />
           </NavBarWrapper>

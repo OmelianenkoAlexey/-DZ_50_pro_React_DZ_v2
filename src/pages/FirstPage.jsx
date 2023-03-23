@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import MyCards from "../components/MyCards";
+import MyCards from "../components/Templates/Main/ComponentsMain/MyCards";
 import { Box, styled } from '@mui/material';
 import { dataCardsServ } from "../api";
 
@@ -21,7 +21,7 @@ export default function FirstPage() {
                 const { data } = await dataCardsServ.fetch();
                 setCardsServ(data);
                 console.log(data);
-            } catch(err) {
+            } catch (err) {
                 console.log(err);
             }
         })();
@@ -30,15 +30,15 @@ export default function FirstPage() {
 
     return (
         <FirstPageWrapper>
-          {cardsData.map(item => (
-            <MyCards 
-            key={item.id}
-            cardName={item.firstName}
-            cardImage={item.avatar}
-            cardDescription={item.description}
-            />
-          ))}
-     
+            {cardsData.map(item => (
+                <MyCards
+                    key={item.id}
+                    cardName={item.firstName}
+                    cardImage={item.avatar}
+                    cardDescription={item.description}
+                />
+            ))}
+
 
 
         </FirstPageWrapper>

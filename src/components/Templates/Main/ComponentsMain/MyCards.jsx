@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@mui/material';
-import CreateModal from './Dialogs/CreateModal';
+import CreateModal from './CreateModal';
 
 
 export default function MyCards({ cardName, cardImage, cardDescription }) {
@@ -9,7 +9,7 @@ export default function MyCards({ cardName, cardImage, cardDescription }) {
   const startQuiz = () => {
     console.log("Quiz started");
     alert("Quiz started")
-}
+  }
 
   return (
     <>
