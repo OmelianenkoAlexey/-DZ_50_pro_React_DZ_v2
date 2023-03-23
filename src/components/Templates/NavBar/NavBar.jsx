@@ -18,6 +18,8 @@ export default function NavBar() {
             </Typography>;
 
             <StarNavBar />
+            <StarNavBar />
+            <StarNavBar />
         </>
     )
 }

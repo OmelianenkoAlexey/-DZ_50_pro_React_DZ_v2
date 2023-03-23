@@ -7,7 +7,6 @@ const FirstPageWrapper = styled(Box)(() => ({
     // backgroundColor: "grey",
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "space-evenly",
     gap: "20px",
 }));
 
