@@ -1,11 +1,13 @@
 import React from "react";
-import TestButtonFooter from "./ComponentsFooter/TestButtonFooter";
+import { Typography } from "@mui/material";
+import ButtonFooter from "./ComponentsFooter/ButtonFooter";
+
 
 export default function Footer() {
 
     return (
         <>
-            <TestButtonFooter />
+            <ButtonFooter />
         </>
     )
 }

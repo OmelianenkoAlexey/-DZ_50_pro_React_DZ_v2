@@ -1,10 +1,10 @@
 import React from 'react';
 import { Grid, Box, styled } from '@mui/material';
 import './App.css';
-import Header from './components/Templates/Header';
-import NavBar from './components/Templates/NavBar';
-import Main from './components/Templates/Main';
-import Footer from './components/Templates/Footer';
+import Header from './components/Templates/Header/Header';
+import NavBar from './components/Templates/NavBar/NavBar';
+import Main from './components/Templates/Main/Main';
+import Footer from './components/Templates/Footer/Footer';
 
 
 const HeaderWrapper = styled(Box)(() => ({

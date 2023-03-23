@@ -10,7 +10,7 @@ export default function Header() {
                 component="h2"
                 color="white"
             >
-                My React project
+                My React project 5
             </Typography>;
         </>
     )

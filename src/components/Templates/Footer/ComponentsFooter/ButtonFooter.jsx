@@ -18,7 +18,7 @@ const images = [
   {
     url: './images/image4.jpg',
     title: 'Camera',
-    width: '33.3%',
+    width: '33.4%',
   },
 ];
 
@@ -86,7 +86,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
   transition: theme.transitions.create('opacity'),
 }));
 
-export default function TestButtonFooter() {
+export default function ButtonFooter() {
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (

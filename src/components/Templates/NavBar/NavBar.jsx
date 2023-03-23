@@ -1,13 +1,23 @@
 import React from "react";
-import TestStarNavBar from "./ComponentsNavBar/TestStarNavBar";
+import { Typography } from "@mui/material";
+import StarNavBar from "./ComponentsNavBar/StarNavBar";
+
 
 export default function NavBar() {
 
     return (
         <>
-<TestStarNavBar />
-<TestStarNavBar />
-<TestStarNavBar />
+
+
+  <Typography
+                variant="h3"
+                component="h2"
+                color="white"
+            >
+                NavBar
+            </Typography>;
+
+            <StarNavBar />
         </>
     )
 }

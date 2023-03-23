@@ -5,7 +5,7 @@ export default function Main() {
 
     return (
         <>
-<FirstPage />
+            <FirstPage />
         </>
     )
 }
