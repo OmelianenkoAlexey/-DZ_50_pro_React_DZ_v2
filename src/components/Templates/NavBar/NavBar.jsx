@@ -7,9 +7,7 @@ export default function NavBar() {
 
     return (
         <>
-
-
-  <Typography
+            <Typography
                 variant="h3"
                 component="h2"
                 color="white"

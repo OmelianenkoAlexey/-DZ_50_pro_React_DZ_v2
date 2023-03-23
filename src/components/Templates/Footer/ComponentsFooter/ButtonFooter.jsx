@@ -7,18 +7,21 @@ import Typography from '@mui/material/Typography';
 const images = [
   {
     url: './images/image1.jpg',
-    title: 'Breakfast',
-    width: '33.3%',
+    title: 'ukr.net',
+    width: '20%',
+    href: 'https://www.ukr.net/'
   },
   {
     url: './images/image2.jpg',
-    title: 'Burgers',
-    width: '33.3%',
+    title: 'youtube',
+    width: '20%',
+    href: 'https://www.youtube.com/'
   },
   {
     url: './images/image4.jpg',
-    title: 'Camera',
-    width: '33.4%',
+    title: 'Telegram',
+    width: '20%',
+    href: 'https://t.me/Mir_Kvartir_Ukraine'
   },
 ];
 
@@ -90,32 +93,38 @@ export default function ButtonFooter() {
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
-        <ImageButton
-          focusRipple
-          key={image.title}
-          style={{
-            width: image.width,
-          }}
-        >
-          <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
-          <ImageBackdrop className="MuiImageBackdrop-root" />
-          <Image>
-            <Typography
-              component="span"
-              variant="subtitle1"
-              color="inherit"
-              sx={{
-                position: 'relative',
-                p: 4,
-                pt: 2,
-                pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-              }}
-            >
-              {image.title}
-              <ImageMarked className="MuiImageMarked-root" />
-            </Typography>
-          </Image>
-        </ImageButton>
+         
+          <ImageButton
+            focusRipple
+            key={image.title}
+            style={{
+              width: image.width,
+            }}
+          >
+            <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+            <ImageBackdrop className="MuiImageBackdrop-root" />
+             <a href={image.href}>
+            <Image>
+              
+              <Typography
+                component="span"
+                variant="subtitle1"
+                color="inherit"
+                sx={{
+                  position: 'relative',
+                  p: 4,
+                  pt: 2,
+                  pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                }}
+              >
+                {image.title}
+                <ImageMarked className="MuiImageMarked-root" />
+              </Typography>
+           
+            </Image>
+               </a>
+          </ImageButton>
+          
       ))}
     </Box>
   );
