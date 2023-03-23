@@ -32,7 +32,9 @@ const FooterWrapper = styled(Box)(() => ({
   backgroundColor: "yellow",
   height: "15vh",
   display: "flex",
+  alignItems: 'center',
   justifyContent: "center",
+  paddingRight: '20px',
 }));
 
 
