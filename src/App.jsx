@@ -1,48 +1,59 @@
 import React from 'react';
-import { Grid, Box, styled } from '@mui/material';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// import { Grid, Box, styled } from '@mui/material';
 import './App.css';
-import Header from './components/Templates/Header/Header';
-import NavBar from './components/Templates/NavBar/NavBar';
+// import Header from './components/Templates/Header/Header';
+// import NavBar from './components/Templates/NavBar/NavBar';
 import Main from './components/Templates/Main/Main';
-import Footer from './components/Templates/Footer/Footer';
+import NotFound from './pages/NotFound';
+// import Footer from './components/Templates/Footer/Footer';
 
 
-const HeaderWrapper = styled(Box)(() => ({
-  backgroundColor: "blue",
-  height: "15vh",
-  display: "flex",
-  justifyContent: "center",
-  padding: "20px",
-}));
+// const HeaderWrapper = styled(Box)(() => ({
+//   backgroundColor: "blue",
+//   height: "15vh",
+//   display: "flex",
+//   justifyContent: "center",
+//   padding: "20px",
+// }));
 
-const NavBarWrapper = styled(Box)(() => ({
-  backgroundColor: "green",
-  height: "70vh",
+// const NavBarWrapper = styled(Box)(() => ({
+//   backgroundColor: "green",
+//   height: "70vh",
 
-}));
+// }));
 
-const MainWrapper = styled(Box)(() => ({
-  backgroundColor: "red",
-  height: "70vh",
-  padding: "20px",
-  overflow: "auto",
-}));
+// const MainWrapper = styled(Box)(() => ({
+//   backgroundColor: "red",
+//   height: "70vh",
+//   padding: "20px",
+//   overflow: "auto",
+// }));
 
-const FooterWrapper = styled(Box)(() => ({
-  backgroundColor: "yellow",
-  height: "15vh",
-  display: "flex",
-  alignItems: 'center',
-  justifyContent: "center",
-  paddingRight: '20px',
-}));
+// const FooterWrapper = styled(Box)(() => ({
+//   backgroundColor: "yellow",
+//   height: "15vh",
+//   display: "flex",
+//   alignItems: 'center',
+//   justifyContent: "center",
+//   paddingRight: '20px',
+// }));
 
 
 
 function App() {
   return (
     <div className="App">
-      <Grid container>
+
+      <BrowserRouter>
+        <Routes>
+        <Route index element={<Main />} path='/test' />
+        <Route path='*' element={<NotFound />} />
+          
+        </Routes>
+      </BrowserRouter>
+      {/* <Grid container>
         <Grid item xs={12} md={12} lg={12}>
           <HeaderWrapper>
             <Header />
@@ -55,7 +66,9 @@ function App() {
         </Grid>
         <Grid item xs={12} sm={9} md={9} lg={9}>
           <MainWrapper>
+
             <Main />
+            
           </MainWrapper>
         </Grid>
         <Grid item xs={12} md={12} lg={12}>
@@ -63,7 +76,7 @@ function App() {
             <Footer />
           </FooterWrapper>
         </Grid>
-      </Grid>
+      </Grid> */}
     </div>
   );
 }
