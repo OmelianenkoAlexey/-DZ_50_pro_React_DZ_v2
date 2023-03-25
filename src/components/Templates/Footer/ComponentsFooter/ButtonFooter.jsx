@@ -18,7 +18,7 @@ const images = [
     href: 'https://www.youtube.com/'
   },
   {
-    url: './images/image4.jpg',
+    url: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1198.jpg',
     title: 'Telegram',
     width: '20%',
     href: 'https://t.me/Mir_Kvartir_Ukraine'

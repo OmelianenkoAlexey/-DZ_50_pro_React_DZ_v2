@@ -34,7 +34,6 @@ export default function NameNextPage() {
                 setLoading(false);
             }
         })();
-
     }, []);
 
     console.log(dataSerPage);
@@ -42,17 +41,19 @@ export default function NameNextPage() {
     if (loading) return <>Loading...</>
 
     return (
-            <NextPageWrapper>
-                {dataSerPage.map(item => (
-                    <div style={{ border: '3px solid black',
+        <NextPageWrapper>
+            {dataSerPage.map(item => (
+                <div style={{
+                    border: '3px solid black',
                     maxWidth: '300px',
                     padding: '10px',
-                     }}>
-                        <h2>{item.name}</h2>
-                        <img src={item.avatar} alt="" />
-                        <div>{item.description}</div>
-                    </div>
-                ))}
-            </NextPageWrapper>
+                    backgroundColor: "grey",
+                }}>
+                    <h2>{item.name}</h2>
+                    <img src={item.avatar} alt="" />
+                    <div>{item.description}</div>
+                </div>
+            ))}
+        </NextPageWrapper>
     );
 }
