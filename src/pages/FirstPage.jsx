@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import MyCards from "../components/Templates/Main/ComponentsMain/MyCards";
 import { Box, styled } from '@mui/material';
 import { dataCardsServ } from "../api";
-import GridTemplate from "../components/Templates/GridTemplate";
 
 const FirstPageWrapper = styled(Box)(() => ({
     // backgroundColor: "grey",
@@ -29,7 +28,6 @@ export default function FirstPage() {
     }, [])
 
     return (
-        <GridTemplate>
             <FirstPageWrapper>
                 {cardsData.map(item => (
                     <MyCards
@@ -40,6 +38,5 @@ export default function FirstPage() {
                     />
                 ))}
             </FirstPageWrapper>
-        </GridTemplate>
     )
 }

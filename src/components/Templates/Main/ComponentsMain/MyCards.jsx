@@ -1,15 +1,27 @@
 import React, { useState } from 'react';
-import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button,
+  Typography
+} from '@mui/material';
 import CreateModal from './CreateModal';
 
 
 export default function MyCards({ cardName, cardImage, cardDescription }) {
   const [open, setOpenModel] = useState(false);
 
-  const startQuiz = () => {
-    console.log("Quiz started");
-    alert("Quiz started")
-  }
+  // const startQuiz = () => {
+  //   console.log("Quiz started");
+  //   alert("Quiz started")
+  // }
+
+// split преобразеут строку в массив
+// join объединяет в строку
+  const newCardName = cardName.split(' ').join('_').toLowerCase();
 
   return (
     <>
@@ -31,8 +43,18 @@ export default function MyCards({ cardName, cardImage, cardDescription }) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" onClick={startQuiz}>Start quiz</Button>
-          <Button size="small" onClick={() => setOpenModel(true)}>Show More</Button>
+
+          {/* <Button size="small" onClick={startQuiz}>Открыть</Button> */}
+          <Button size="small">
+            <Link
+            style={{ textDecoration: 'none', color: 'inherit' }}
+            to={`/test/${newCardName}`}
+            >
+              Открыть
+            </Link>
+          </Button>
+
+          <Button size="small" onClick={() => setOpenModel(true)}>Подробнее</Button>
         </CardActions>
       </Card>
       <CreateModal
