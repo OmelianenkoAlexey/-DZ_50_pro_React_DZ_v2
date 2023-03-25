@@ -4,6 +4,7 @@ import './App.css';
 import GridTemplate from './components/Templates/GridTemplate';
 import NotFound from './pages/NotFound';
 import Main from './components/Templates/Main/Main';
+import NextPage from './components/Templates/NextPage';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <Routes>
             <Route index element={<Main />} path='/test' />
             <Route path='*' element={<NotFound />} />
+            <Route path='/test/*' element={<NextPage />} />
           </Routes>
         </BrowserRouter>
       </GridTemplate>
