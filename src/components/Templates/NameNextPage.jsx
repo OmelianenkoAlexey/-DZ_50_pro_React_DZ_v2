@@ -23,6 +23,8 @@ export default function NameNextPage() {
 
     const [loading, setLoading] = useState(true);
 
+    const [error, setError] = useState(false);
+
     const [dataSerPage, setDataSerPage] = useState([]);
 
     useEffect(() => {
@@ -33,6 +35,7 @@ export default function NameNextPage() {
                 console.log(data);
                 setDataSerPage(data);
             } catch (err) {
+                setError(true);
                 console.log(err);
             } finally {
                 setLoading(false);
@@ -44,6 +47,9 @@ export default function NameNextPage() {
     // можно в mui найти прокрутку во время ожидания
     if (loading) return <>Loading...</>
     // if (loading) return <LoadingPage />
+
+
+    if (error) return <>Page in progress...</>
 
     return (
         <NextPageWrapper>
