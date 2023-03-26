@@ -5,6 +5,10 @@ import { Box, styled } from '@mui/material';
 // можно так переименовать принятый (импортируемый) компонент
 // import { dataCardsServPage as dataCardsServPageApi } from "../../api";
 
+import LoadingPage from './LoadingPage';
+
+
+
 const NextPageWrapper = styled(Box)(() => ({
     // backgroundColor: "grey",
     display: "flex",
@@ -39,9 +43,11 @@ export default function NameNextPage() {
     console.log(dataSerPage);
     // можно в mui найти прокрутку во время ожидания
     if (loading) return <>Loading...</>
+    // if (loading) return <LoadingPage />
 
     return (
         <NextPageWrapper>
+        
             {dataSerPage.map(item => (
                 <div style={{
                     border: '3px solid black',
