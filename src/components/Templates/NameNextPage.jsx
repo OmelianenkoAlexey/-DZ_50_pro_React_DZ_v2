@@ -47,7 +47,6 @@ export default function NameNextPage() {
 
     return (
         <NextPageWrapper>
-        
             {dataSerPage.map(item => (
                 <div style={{
                     border: '3px solid black',
