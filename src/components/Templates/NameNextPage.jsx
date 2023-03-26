@@ -48,7 +48,6 @@ export default function NameNextPage() {
     if (loading) return <>Loading...</>
     // if (loading) return <LoadingPage />
 
-
     if (error) return <>Page in progress...</>
 
     return (
