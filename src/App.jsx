@@ -10,7 +10,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path='*' element={<NotFound />} />
-          <Route path='/testsecond/*' element={<NextPage />} />
+          <Route path='/test/*' element={<NextPage />} />
         </Routes>
       </BrowserRouter>
     </div>

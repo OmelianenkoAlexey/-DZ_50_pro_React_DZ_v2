@@ -6,10 +6,9 @@ import {
   CardContent,
   CardMedia,
   Button,
-  Typography
+  Typography,
 } from '@mui/material';
 import CreateModal from './CreateModal';
-
 
 export default function MyCards({ cardName, cardImage, cardDescription }) {
   const [open, setOpenModel] = useState(false);
@@ -29,7 +28,7 @@ export default function MyCards({ cardName, cardImage, cardDescription }) {
         <CardMedia
           sx={{
             height: 150,
-            width: 150
+            width: 150,
           }}
           image={cardImage}
           title={cardName}
@@ -48,7 +47,7 @@ export default function MyCards({ cardName, cardImage, cardDescription }) {
           <Button size="small">
             <Link
             style={{ textDecoration: 'none', color: 'inherit' }}
-            to={`/testsecond/${newCardName}`}
+            to={`/test/${newCardName}`}
             >
               Открыть
             </Link>
@@ -65,8 +64,6 @@ export default function MyCards({ cardName, cardImage, cardDescription }) {
         cardImage={cardImage}
         cardDescription={cardDescription}
       />
-
     </>
-
   );
 }
