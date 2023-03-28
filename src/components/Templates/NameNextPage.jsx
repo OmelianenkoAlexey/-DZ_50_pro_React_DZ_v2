@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { dataCardsServPage } from '../../api';
 import { Box, styled } from '@mui/material';
+import { dataCardsServPage } from '../../api';
 // можно так переименовать принятый (импортируемый) компонент
 // import { dataCardsServPage as dataCardsServPageApi } from '../../api';
 
@@ -16,7 +16,6 @@ const NextPageWrapper = styled(Box)(() => ({
 
 export default function NameNextPage() {
   const { name } = useParams();
-  console.log(name);
 
   const [loading, setLoading] = useState(true);
 
@@ -29,18 +28,15 @@ export default function NameNextPage() {
     (async () => {
       try {
         const { data } = await dataCardsServPage.fetch(name);
-        console.log(data);
         setDataSerPage(data);
       } catch (err) {
         setError(true);
-        console.log(err);
       } finally {
         setLoading(false);
       }
     })();
   }, []);
 
-  console.log(dataSerPage);
   // можно в mui найти прокрутку во время ожидания
   if (loading) return <>Loading...</>;
   // if (loading) return <LoadingPage />
