@@ -14,12 +14,10 @@ export default function MyCards({ cardName, cardImage, cardDescription }) {
   const [open, setOpenModel] = useState(false);
 
   // const startQuiz = () => {
-  //   console.log("Quiz started");
-  //   alert("Quiz started")
+  //   console.log('Quiz started');
+  //   alert('Quiz started')
   // }
 
-// split преобразеут строку в массив
-// join объединяет в строку
   const newCardName = cardName.split(' ').join('_').toLowerCase();
 
   return (
@@ -34,17 +32,17 @@ export default function MyCards({ cardName, cardImage, cardDescription }) {
           title={cardName}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant='h5' component='div'>
             {cardName}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant='body2' color='text.secondary'>
             {cardDescription.slice(0, 50)}...
           </Typography>
         </CardContent>
         <CardActions>
 
-          {/* <Button size="small" onClick={startQuiz}>Открыть</Button> */}
-          <Button size="small">
+          {/* <Button size='small' onClick={startQuiz}>Открыть</Button> */}
+          <Button size='small'>
             <Link
             style={{ textDecoration: 'none', color: 'inherit' }}
             to={`/test/${newCardName}`}
@@ -53,7 +51,7 @@ export default function MyCards({ cardName, cardImage, cardDescription }) {
             </Link>
           </Button>
 
-          <Button size="small" onClick={() => setOpenModel(true)}>Подробнее</Button>
+          <Button size='small' onClick={() => setOpenModel(true)}>Подробнее</Button>
         </CardActions>
       </Card>
       <CreateModal

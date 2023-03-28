@@ -5,37 +5,37 @@ import NavBar from './NavBar/NavBar';
 import Footer from './Footer/Footer';
 
 const HeaderWrapper = styled(Box)(() => ({
-  backgroundColor: "blue",
-  height: "15vh",
-  display: "flex",
-  justifyContent: "center",
-  padding: "20px",
+  backgroundColor: 'blue',
+  height: '15vh',
+  display: 'flex',
+  justifyContent: 'center',
+  padding: '20px',
 }));
 
 const NavBarWrapper = styled(Box)(() => ({
-  backgroundColor: "green",
-  height: "70vh",
+  backgroundColor: 'green',
+  height: '70vh',
 }));
 
 const MainWrapper = styled(Box)(() => ({
-  backgroundColor: "red",
-  height: "70vh",
-  padding: "20px",
-  overflow: "auto",
+  backgroundColor: 'red',
+  height: '70vh',
+  padding: '20px',
+  overflow: 'auto',
 }));
 
 const FooterWrapper = styled(Box)(() => ({
-  backgroundColor: "yellow",
-  height: "15vh",
-  display: "flex",
+  backgroundColor: 'yellow',
+  height: '15vh',
+  display: 'flex',
   alignItems: 'center',
-  justifyContent: "center",
+  justifyContent: 'center',
   paddingRight: '20px',
 }));
 
 export default function GridTemplate({ children }) {
   return (
-    <div className="App">
+    <div className='App'>
 
       <Grid container>
         <Grid item xs={12} md={12} lg={12}>
@@ -43,7 +43,7 @@ export default function GridTemplate({ children }) {
             <Header />
           </HeaderWrapper>
         </Grid>
-        <Grid item sm={3} md={3} lg={3} display={{ xs: "none", sm: "block" }}>
+        <Grid item sm={3} md={3} lg={3} display={{ xs: 'none', sm: 'block' }}>
           <NavBarWrapper>
             <NavBar />
           </NavBarWrapper>
@@ -64,4 +64,3 @@ export default function GridTemplate({ children }) {
     </div>
   );
 }
-
