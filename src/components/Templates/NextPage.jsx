@@ -9,7 +9,7 @@ export default function NextPage() {
     <GridTemplate>
       <Routes>
         {/* <Route index element={<Main />} path='/test' /> */}
-        <Route index element={<Main />} path='/' />
+        <Route element={<Main />} path='/' />
 
         {/* /:name фиксированный элемент */}
         <Route path='/edit' element={<>Test text edit</>} />

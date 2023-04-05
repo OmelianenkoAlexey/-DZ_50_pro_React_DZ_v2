@@ -10,7 +10,8 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path='*' element={<NotFound />} />
-          <Route path='/test/*' element={<NextPage />} />
+          {/* <Route path='/test/*' element={<NextPage />} /> */}
+          <Route index path='/*' element={<NextPage />} />
         </Routes>
       </BrowserRouter>
     </div>

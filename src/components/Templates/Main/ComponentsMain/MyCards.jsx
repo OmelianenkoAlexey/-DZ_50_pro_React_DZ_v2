@@ -45,7 +45,8 @@ export default function MyCards({ cardName, cardImage, cardDescription }) {
           <Button size='small'>
             <Link
             style={{ textDecoration: 'none', color: 'inherit' }}
-            to={`/test/${newCardName}`}
+            // to={`/test/${newCardName}`}
+            to={`/${newCardName}`}
             >
               Открыть
             </Link>
